@@ -2,7 +2,6 @@
 //On attend la fin du chargement de kla page
 $().ready(function(){
   // Variable globale
-  var counter = 0;
   var currentPerson = "";
   var url = "https://iwa2015.herokuapp.com/api/todo/";
 
@@ -10,7 +9,8 @@ $().ready(function(){
   $("input[value='Afficher']").click(getUser);
   $("input[value='Ajouter']").click(saveTodo);
   $("input[value='Tout effacer']").click(removeAll);
-  $("input[value='Supprimer la séléction']").click(removeSel);
+  $("#todoList").on('click','button.done',removeSel); //Je met un listenner sur todolist, et lorsqu'on cliquera sur
+  // l'element qui a la class "done", la fonction se lance
 
   function getUser() {
     //Appel ajax
@@ -48,8 +48,9 @@ $().ready(function(){
   function addTodo(todoMessage) {
         // Création du nouvel élément de la liste
     //Maintenant, on se base QUE sur le faite que l'element et coché pour le récupéré (voir removeSel())
-    var newElement = "<li><input type='checkbox'> "+ todoMessage + "</li>";
-    counter++;
+      var newElement = "<li class=\"list-group-item\"> " + todoMessage
+          + "<button class=\"btn btn-success btn-xs pull-right done\"><span class=\"glyphicon glyphicon-ok\"></span></button>"
+          + "</li>";
     // Ajout du nouvel élément à la liste
     $("#todoList").append(newElement);
   }
@@ -66,15 +67,9 @@ $().ready(function(){
         });
   }
 
-  function removeSel() {
-    // On récupère les éléments coché. Il sont fourni sous forme d'un tableau
-    var checkboxes = $("input:checked");// input:checked => tous les inputs qui sont cochés
-
-    // each va parcourir l'ensemble du tableau et fournir les index de chaque element.
-    // cela evite de faire for (i=0; i < tab.lenght -1; i++)
-    checkboxes.each(function(index){
-      // On supprime le parent (<li>) de l'element correspondant du tableau
-      checkboxes[index].parentNode.remove();
-    });
+  function removeSel(event) {
+      //Event, c'est toute les informations concernent l'envenement qui a déclenché la fonction.
+      //Ici c'est donc un click, qui a pour "target" le boutton done. Ensuite on remonte au parent 'li' et on le supprime
+      event.target.parentNode.remove();
   }
 });

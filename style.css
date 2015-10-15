@@ -11,3 +11,11 @@ h2 {
     display: inline-block;
     margin-right: 20px;
 }
+
+input.btn:nth-child(4){
+    margin-top: 20px;
+
+}
+.todoMessage {
+    margin-left: 10px;
+}
