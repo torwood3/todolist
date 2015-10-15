@@ -4,30 +4,55 @@
         <meta charset="UTF-8">
         <title>Ma TODO list !</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script language="javascript" src="function.js"></script>
+
     </head>
     <body>
-        <h1>Ma TODO list !</h1>
-        <h2>Menu</h2>
-        <ul>
-            <li>Afficher la TODO list d'une personne
-                <br>
-                <input type="text" id="personId" size=20 >
-                <input type="button" value="Afficher">
-            </li>
-            <li>Ajouter un TODO
-                <br>
-                <input type="text" id="todoMessage" size=20 disabled>
-                <input type="button" value="Ajouter" disabled>
-            </li>
-        </ul>
-        <h2>Mes TODO</h2>
-        <ul id="todoList"></ul>
-        <p>
-            <input type="button" value="Supprimer la séléction" >
-            <input type="button" value="Tout effacer" >
-        </p>
+        <!-- Container permettant de centrer et de rendre responsive l'application -->
+        <div class="container" >
+            <div class="row">
+                <!-- debut du bloc de longueur 6 et de décalage 3 (permet de centrer) -->
+                <div class="col-md-6 col-md-offset-3" id="todoListApp">
+                    <h1>Ma TODO list !</h1>
+
+                    <!-- input + button pour charger une liste de To do -->
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                        </span>
+                        <input type="text" id="personId" class="form-control" placeholder="Nom d'une ToDo">
+                        <span class="input-group-btn">
+                            <input type="button" class="btn btn-default" value="Afficher">
+                        </span>
+                    </div>
+
+                    <h2>Mes TODO</h2>
+                    <input type="button" class="btn btn-danger" value="Tout effacer" >
+
+                    <!-- Liste de l'ensemble des to do-->
+                    <ul class="list-group checked-list-box" id="todoList">
+                        <li class="list-group-item"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> git Cras justo odio</li>
+                        <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                    </ul>
+
+                    <!-- Input + Button pour l'ajout d'une to do -->
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </span>
+                        <input type="text"  class="form-control" id="todoMessage" placeholder="What Todo today?" disabled>
+                        <span class="input-group-btn">
+                            <input type="button" value="Ajouter" class="btn btn-default" disabled>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script language="javascript" src="function.js"></script>
     </body>
 </html>

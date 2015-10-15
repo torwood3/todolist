@@ -1,40 +1,13 @@
-body {
-    background-color: #eee;
-    font-family: Arial;
-    margin: 0;
-    padding: 0
-}
-
-h1, h2 {
-    font-family: "Trebuchet MS";
-    margin: 5px 0;
-    padding: 5px 10px
-}
-
-h1 {
-    background-color: #000
-}
-
-h1, h2 {
-    color: #fff
+#todoListApp {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 0 2px 5px 1px #0F0F0F;
+    box-shadow: 0 2px 5px 1px #0F0F0F;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 h2 {
-    background-color: #444
-}
-
-div {
-    font-size: 10pt;
-    padding-left: 20px
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0
-}
-
-ul > li {
-    background-color: #ddd;
-    margin: 2pc;
-    padding: 2px
+    display: inline-block;
+    margin-right: 20px;
 }
