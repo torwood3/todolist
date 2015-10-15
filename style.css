@@ -1,0 +1,40 @@
+body {
+    background-color: #eee;
+    font-family: Arial;
+    margin: 0;
+    padding: 0
+}
+
+h1, h2 {
+    font-family: "Trebuchet MS";
+    margin: 5px 0;
+    padding: 5px 10px
+}
+
+h1 {
+    background-color: #000
+}
+
+h1, h2 {
+    color: #fff
+}
+
+h2 {
+    background-color: #444
+}
+
+div {
+    font-size: 10pt;
+    padding-left: 20px
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0
+}
+
+ul > li {
+    background-color: #ddd;
+    margin: 2pc;
+    padding: 2px
+}
