@@ -2,7 +2,6 @@ ToDo List
 ===================
 
 Ceci est la correction du fil rouge proposé pour les 3A en cours d'IWA.
-Il reprend les étapes de l'exercice.
 
 ----------
 
@@ -16,7 +15,7 @@ Il vous suffit de changer de branche pour afficher le code correspondant.
 
 > **Note:**
 
-> - Au dessus du code source, il y a un menu déroulant vous proposant les différentes branche.
+> - Au dessus du code source, il y a un menu déroulant vous proposant les différentes branches.
 > - Il suffit de cliquer sur une branche pour la charge.
 
 
@@ -24,12 +23,12 @@ Il vous suffit de changer de branche pour afficher le code correspondant.
 
 En utilisant git, il vous est possible de télécharger le code source pour l'utiliser sur votre machine. Pour cela, il faut tout d'abords installer git : https://git-scm.com/
 
-Ensuite, déplacer vous dans l'arborescence de votre machine à l'endroit où vous souhaiter télécharger le code. 
+Ensuite, déplacez-vous dans l'arborescence de votre machine à l'endroit où vous souhaiter télécharger le code. 
 Dans une console exécutez: 
 ```bash
 git clone "https://github.com/torwood3/todolist.git"
 ```
-Un dossier "todolist" se sera crée, allez dedans (cd).
+Un dossier "todolist" se sera créé, allez dedans (cd).
 Le code source y sera disponible.
 
 Pour changer d'étape, X étant le numéro de l'étape : 
