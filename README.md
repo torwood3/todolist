@@ -47,9 +47,15 @@ Vous pouvez toutefois télécharger le code source sous format .zip en cliquant 
 Description des étapes
 -------------------
 ~~Etape 0 : HTML~~ Pas implémenté
+
 ~~Etape 1 : CSS~~ Pas implémenté
+
 Etape 2 : JS 
+
 Etape 3 : jQuery 
+
 Etape 4 : Ajax 
+
 Etape 5 : Bootstrap 
+
 
